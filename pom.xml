@@ -1,0 +1,157 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>kr.or.ddit</groupId>
+  <artifactId>HomeWork07</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+  	<properties>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
+	</properties>
+  	<build>
+		<finalName>hw07</finalName>
+	</build>
+	<dependencies>
+		<!-- gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.13.0</version>
+		</dependency>
+	
+		<!-- Servlet -->
+		<!-- jakarta.servlet-api -->
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- jakarta.servlet.jsp-api -->
+		<dependency>
+			<groupId>jakarta.servlet.jsp</groupId>
+			<artifactId>jakarta.servlet.jsp-api</artifactId>
+			<version>3.1.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- JSTL 인터페이스 -->
+		<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+		<!-- JSTL 구현체 -->
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		
+	    <!-- sitemesh -->
+	    <dependency>
+	        <groupId>org.sitemesh</groupId>
+	        <artifactId>sitemesh</artifactId>
+	        <version>3.2.1</version>
+	    </dependency>
+	    
+		<!-- Commons 계열 -->
+		<!-- java bean대상 리플렉션 지원 -->
+		<dependency>
+		    <groupId>commons-beanutils</groupId>
+		    <artifactId>commons-beanutils</artifactId>
+		    <version>1.10.1</version>
+		</dependency>
+		<!-- commons-lang3 -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.17.0</version>
+		</dependency>
+		<!-- java bean vaildation 지원 -->
+		<dependency>
+		    <groupId>org.hibernate.validator</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>9.0.0.Final</version>
+		</dependency>
+		<!-- 검증 메시지를 만들어주는 역활 -->
+		<dependency>
+		    <groupId>org.glassfish.expressly</groupId>
+		    <artifactId>expressly</artifactId>
+		    <version>6.0.0</version>
+		</dependency>
+		
+		<!-- jsoup -->
+		<dependency>
+		    <groupId>org.jsoup</groupId>
+		    <artifactId>jsoup</artifactId>
+		    <version>1.19.1</version>
+		</dependency>
+		
+		<!-- lombok -->
+		<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.18.38</version>
+		    <scope>provided</scope>
+		</dependency>
+		
+		<!-- 비밀번호 암호와 지원 -->
+		<!-- spring-security-crypto -->
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-crypto</artifactId>
+		    <version>6.4.5</version>
+		</dependency>
+		
+		<!-- JUnit -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.12.2</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- DB 연결 지원 -->
+		<!-- ojdbc11 -->
+		<dependency>
+		    <groupId>com.oracle.database.jdbc</groupId>
+		    <artifactId>ojdbc11</artifactId>
+		    <version>21.17.0.0</version>
+		</dependency>
+		
+		<!-- HikariCP -->
+		<dependency>
+		   <groupId>com.zaxxer</groupId>
+		   <artifactId>HikariCP</artifactId>
+		   <version>6.3.0</version>
+		</dependency>
+		
+		<!-- mybatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.5.19</version>
+		</dependency>
+		
+		<!-- LOGGING -->
+		<!-- logback-classic -->
+		<dependency>
+		    <groupId>ch.qos.logback</groupId>
+		    <artifactId>logback-classic</artifactId>
+		    <version>1.5.18</version>
+		    <scope>compile</scope>
+		</dependency>
+		<!-- slf4j-api -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>2.0.17</version>
+		</dependency>
+		<!-- log4j2-jdbc4.1 -->
+		<dependency>
+		    <groupId>org.bgee.log4jdbc-log4j2</groupId>
+		    <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+		    <version>1.16</version>
+		</dependency>
+	</dependencies>
+</project>
