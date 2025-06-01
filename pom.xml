@@ -11,7 +11,39 @@
   	<build>
 		<finalName>hw07</finalName>
 	</build>
+	
+	<dependencyManagement>
+  	<dependencies>
+  		<!-- springframework/spring-framework-bom -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-framework-bom</artifactId>
+		    <version>6.2.7</version>
+		    <type>pom</type>
+		    <scope>import</scope>
+		</dependency>
+  	</dependencies>
+  </dependencyManagement>
+  
 	<dependencies>
+		<!-- DI container -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		
+		<!-- Spring MVC 모델을 지원하는 모듈 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		
+		<!-- ORM 연동모듈 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
+		
 		<!-- gson -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
@@ -103,6 +135,13 @@
 		    <version>6.4.5</version>
 		</dependency>
 		
+		<!-- spring Test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
 		<!-- JUnit -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -131,6 +170,11 @@
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis</artifactId>
 		    <version>3.5.19</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.mybatis</groupId>
+		  <artifactId>mybatis-spring</artifactId>
+		  <version>3.0.4</version>
 		</dependency>
 		
 		<!-- LOGGING -->

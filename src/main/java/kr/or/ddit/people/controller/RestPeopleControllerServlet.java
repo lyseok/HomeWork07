@@ -6,27 +6,41 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import kr.or.ddit.AppConfig;
 import kr.or.ddit.exception.ResponseStateExcetion;
 import kr.or.ddit.people.service.PeopleService;
 import kr.or.ddit.people.service.impl.PeopleServiceImpl;
 import kr.or.ddit.validate.util.ValidateUtils;
 import kr.or.ddit.vo.PersonVO;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @WebServlet("/rest/people/*")
+@Component
 public class RestPeopleControllerServlet extends HttpServlet {
-	private PeopleService service = new PeopleServiceImpl();
+	private PeopleService service;
 	private Gson gson = new Gson();
 	
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+		ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+		service = ac.getBean(PeopleService.class);
+	}
 	/**
 	 * @param out 출력 Writer
 	 * @param status 요청 성공 여부
