@@ -2,8 +2,6 @@ package kr.or.ddit.people.controller;
 
 import java.io.IOException;
 
-import org.apache.commons.lang3.StringUtils;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
