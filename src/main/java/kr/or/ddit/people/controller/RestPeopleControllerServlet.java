@@ -20,7 +20,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import kr.or.ddit.AppConfig;
+import kr.or.ddit.conf.AppConfig;
 import kr.or.ddit.exception.ResponseStateExcetion;
 import kr.or.ddit.people.service.PeopleService;
 import kr.or.ddit.people.service.impl.PeopleServiceImpl;

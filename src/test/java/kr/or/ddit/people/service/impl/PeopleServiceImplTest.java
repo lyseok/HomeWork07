@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import kr.or.ddit.AppConfig;
+import kr.or.ddit.conf.AppConfig;
 import kr.or.ddit.people.service.PeopleService;
 import kr.or.ddit.vo.PersonVO;
 
